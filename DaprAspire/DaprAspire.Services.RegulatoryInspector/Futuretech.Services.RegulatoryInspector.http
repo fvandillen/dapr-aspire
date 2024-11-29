@@ -1,0 +1,6 @@
+@Futuretech.Services.RegulatoryInspector_HostAddress = http://localhost:5191
+
+GET {{Futuretech.Services.RegulatoryInspector_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

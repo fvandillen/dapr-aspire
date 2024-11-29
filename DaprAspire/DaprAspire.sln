@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DaprAspire.AppHost", "DaprAspire.AppHost\DaprAspire.AppHost.csproj", "{234F1AAE-9EB2-4335-B795-1C398580BEB6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DaprAspire.ServiceDefaults", "DaprAspire.ServiceDefaults\DaprAspire.ServiceDefaults.csproj", "{A21F8EE4-5791-4C63-B4B3-B12FCBCAB70F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{C78D2FAF-3A7B-4C5E-9DC0-280AA86E7049}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DaprAspire.Domain", "DaprAspire.Domain\DaprAspire.Domain.csproj", "{FD5DFC22-C325-4787-AA2D-701C1C97CEA6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DaprAspire.Services.Airport", "DaprAspire.Services.Airport\DaprAspire.Services.Airport.csproj", "{B18CB687-D1FC-47E3-8453-583C09021954}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DaprAspire.Services.RegulatoryInspector", "DaprAspire.Services.RegulatoryInspector\DaprAspire.Services.RegulatoryInspector.csproj", "{99DDA414-409F-40FF-A4D1-AEF08C953BD3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DaprAspire.Services.Flight", "DaprAspire.Services.Flight\DaprAspire.Services.Flight.csproj", "{1061D349-5527-432A-B738-EE11AA86987C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{234F1AAE-9EB2-4335-B795-1C398580BEB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{234F1AAE-9EB2-4335-B795-1C398580BEB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{234F1AAE-9EB2-4335-B795-1C398580BEB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{234F1AAE-9EB2-4335-B795-1C398580BEB6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A21F8EE4-5791-4C63-B4B3-B12FCBCAB70F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A21F8EE4-5791-4C63-B4B3-B12FCBCAB70F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A21F8EE4-5791-4C63-B4B3-B12FCBCAB70F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A21F8EE4-5791-4C63-B4B3-B12FCBCAB70F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD5DFC22-C325-4787-AA2D-701C1C97CEA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD5DFC22-C325-4787-AA2D-701C1C97CEA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD5DFC22-C325-4787-AA2D-701C1C97CEA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD5DFC22-C325-4787-AA2D-701C1C97CEA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B18CB687-D1FC-47E3-8453-583C09021954}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B18CB687-D1FC-47E3-8453-583C09021954}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B18CB687-D1FC-47E3-8453-583C09021954}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B18CB687-D1FC-47E3-8453-583C09021954}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99DDA414-409F-40FF-A4D1-AEF08C953BD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99DDA414-409F-40FF-A4D1-AEF08C953BD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99DDA414-409F-40FF-A4D1-AEF08C953BD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99DDA414-409F-40FF-A4D1-AEF08C953BD3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1061D349-5527-432A-B738-EE11AA86987C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1061D349-5527-432A-B738-EE11AA86987C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1061D349-5527-432A-B738-EE11AA86987C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1061D349-5527-432A-B738-EE11AA86987C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B18CB687-D1FC-47E3-8453-583C09021954} = {C78D2FAF-3A7B-4C5E-9DC0-280AA86E7049}
+		{99DDA414-409F-40FF-A4D1-AEF08C953BD3} = {C78D2FAF-3A7B-4C5E-9DC0-280AA86E7049}
+		{1061D349-5527-432A-B738-EE11AA86987C} = {C78D2FAF-3A7B-4C5E-9DC0-280AA86E7049}
+	EndGlobalSection
+EndGlobal

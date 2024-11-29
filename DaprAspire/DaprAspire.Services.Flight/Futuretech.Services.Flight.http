@@ -1,0 +1,6 @@
+@Futuretech.Services.Flight_HostAddress = http://localhost:5148
+
+GET {{Futuretech.Services.Flight_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

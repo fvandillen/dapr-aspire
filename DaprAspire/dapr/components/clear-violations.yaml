@@ -1,0 +1,14 @@
+apiVersion: dapr.io/v1alpha1
+kind: Component
+metadata:
+  name: clear-violations
+spec:
+  type: bindings.cron
+  version: v1
+  metadata:
+    - name: schedule
+      value: "@every 30m"
+    - name: route
+      value: "/violations/clear"
+scopes:
+  - regulatory-inspector
