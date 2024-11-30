@@ -22,6 +22,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\DaprAspire.Constants\DaprAspire.Constants.csproj" />
       <ProjectReference Include="..\DaprAspire.Domain\DaprAspire.Domain.csproj" />
       <ProjectReference Include="..\DaprAspire.ServiceDefaults\DaprAspire.ServiceDefaults.csproj" />
     </ItemGroup>

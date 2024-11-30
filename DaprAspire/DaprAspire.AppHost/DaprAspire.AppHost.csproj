@@ -17,6 +17,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\DaprAspire.Constants\DaprAspire.Constants.csproj" IsAspireProjectResource="false" />
       <ProjectReference Include="..\DaprAspire.Services.Airport\DaprAspire.Services.Airport.csproj" />
       <ProjectReference Include="..\DaprAspire.Services.Flight\DaprAspire.Services.Flight.csproj" />
       <ProjectReference Include="..\DaprAspire.Services.RegulatoryInspector\DaprAspire.Services.RegulatoryInspector.csproj" />

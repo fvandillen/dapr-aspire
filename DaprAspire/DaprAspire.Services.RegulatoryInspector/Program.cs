@@ -1,9 +1,10 @@
+using DaprAspire.Constants;
 using DaprAspire.Services.RegulatoryInspector.Database;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.AddServiceDefaults();
-builder.AddSqlServerDbContext<RegulatoryInspectorContext>("regulatory-inspector-sql");
+builder.AddSqlServerDbContext<RegulatoryInspectorContext>(ResourceNames.RegulatoryInspectorSqlDatabase);
 
 var app = builder.Build();
 if (app.Environment.IsDevelopment())

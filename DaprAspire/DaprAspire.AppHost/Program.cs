@@ -1,6 +1,7 @@
 using System.Collections.Immutable;
 using Aspire.Hosting.Dapr;
 using DaprAspire.AppHost.Extensions;
+using DaprAspire.Constants;
 
 var builder = DistributedApplication.CreateBuilder(args);
 
@@ -13,7 +14,7 @@ var daprComponentDirectory = ImmutableHashSet.Create(Directory.GetCurrentDirecto
 
 #region CosmosDB
 
-var cosmosDb = builder.AddContainer("cosmosdb", "mcr.microsoft.com/cosmosdb/linux/azure-cosmos-emulator")
+var cosmosDb = builder.AddContainer(ResourceNames.CosmosDb, "mcr.microsoft.com/cosmosdb/linux/azure-cosmos-emulator")
     .WithImageTag("vnext-preview")
     .WithEnvironment("PROTOCOL", "https")
     .WithHttpsEndpoint(8081, 8010, "gateway")
@@ -30,7 +31,7 @@ var cosmosDb = builder.AddContainer("cosmosdb", "mcr.microsoft.com/cosmosdb/linu
 #region Airport service
 
 builder
-    .AddProject<Projects.DaprAspire_Services_Airport>("airport")
+    .AddProject<Projects.DaprAspire_Services_Airport>(ResourceNames.AirportService)
     .WithOpenAirportCommand()
     .WithCloseAirportCommand()
     .WithDaprSidecar(new DaprSidecarOptions()
@@ -42,12 +43,16 @@ builder
 
 #region Regulatory inspector service
 
+
+
 var sql = builder
-    .AddSqlServer("sql")
-    .AddDatabase("regulatory-inspector-sql");
+    .AddSqlServer(ResourceNames.RegulatoryInspectorSql)
+    .AddDatabase(ResourceNames.RegulatoryInspectorSqlDatabase);
+
+
 
 builder
-    .AddProject<Projects.DaprAspire_Services_RegulatoryInspector>("regulatory-inspector")
+    .AddProject<Projects.DaprAspire_Services_RegulatoryInspector>(ResourceNames.RegulatoryInspectorService)
     .WaitFor(sql)
     .WithReference(sql)
     .WithDaprSidecar(new DaprSidecarOptions()
@@ -60,7 +65,7 @@ builder
 #region Flight service
 
 builder
-    .AddProject<Projects.DaprAspire_Services_Flight>("flight")
+    .AddProject<Projects.DaprAspire_Services_Flight>(ResourceNames.FlightService)
     .WithDaprSidecar(new DaprSidecarOptions()
     {
         ResourcesPaths = daprComponentDirectory

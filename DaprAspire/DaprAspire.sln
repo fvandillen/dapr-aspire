@@ -14,6 +14,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DaprAspire.Services.Regulat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DaprAspire.Services.Flight", "DaprAspire.Services.Flight\DaprAspire.Services.Flight.csproj", "{1061D349-5527-432A-B738-EE11AA86987C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DaprAspire.Constants", "DaprAspire.Constants\DaprAspire.Constants.csproj", "{BD3DB0BA-287F-4869-9211-3BE96750A5EC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,6 +46,10 @@ Global
 		{1061D349-5527-432A-B738-EE11AA86987C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1061D349-5527-432A-B738-EE11AA86987C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1061D349-5527-432A-B738-EE11AA86987C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD3DB0BA-287F-4869-9211-3BE96750A5EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD3DB0BA-287F-4869-9211-3BE96750A5EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD3DB0BA-287F-4869-9211-3BE96750A5EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD3DB0BA-287F-4869-9211-3BE96750A5EC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{B18CB687-D1FC-47E3-8453-583C09021954} = {C78D2FAF-3A7B-4C5E-9DC0-280AA86E7049}
