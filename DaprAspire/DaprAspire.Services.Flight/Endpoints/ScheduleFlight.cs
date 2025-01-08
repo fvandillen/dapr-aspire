@@ -2,14 +2,22 @@ using Dapr.Client;
 using DaprAspire.Domain.Events;
 using Microsoft.AspNetCore.Mvc;
 
-namespace DaprAspire.Services.Flight.Controllers;
+namespace DaprAspire.Services.Flight.Endpoints;
 
-[ApiController]
-public class SchedulerController(DaprClient daprClient, ILogger<SchedulerController> logger) : ControllerBase
+public static class ScheduleFlight
 {
-	[HttpPost("~/scheduler")]
-	public async Task<IActionResult> ScheduleFlights()
+	public static IEndpointRouteBuilder MapScheduleFlight(this IEndpointRouteBuilder app)
 	{
+		app.MapPost("/scheduler", Handle);
+		return app;
+	}
+	
+	private static async Task<IResult> Handle(
+		[FromServices] ILoggerFactory loggerFactory,
+		[FromServices] DaprClient daprClient)
+	{
+		var logger = loggerFactory.CreateLogger(typeof(ScheduleFlight).FullName!);
+		
 		logger.LogInformation("Attempting to schedule flights, checking if airport is open");
 		// First, check if the airport is open.
 		var request = daprClient.CreateInvokeMethodRequest(HttpMethod.Get, "airport", "status");
@@ -34,6 +42,6 @@ public class SchedulerController(DaprClient daprClient, ILogger<SchedulerControl
 			logger.LogWarning("Airport is closed. Not scheduling flights");
 		}
 		
-		return Ok();
+		return Results.Ok();
 	}
 }
